@@ -1,0 +1,32 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1 class="title">MARKET: <%= stock.companyName %> (<%= stock.symbol %>) </h1>
+
+  <div class="main">
+
+    <!-- search box -->
+    <div class="form-group has-search">
+      <form class="" action="/" method="POST">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="Search Stock Quote...">
+        <button type="submit">Lookup</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div class="content">
+
+  <p><strong>Lates Price: </strong>$<%= stock.latestPrice %></p>
+  <p><strong>Previous Close: </strong>$<%= stock.previousClose %></p>
+  <p><strong>Change Percent: </strong><%= stock.changePercent %>%</p>
+  <p><strong>YTD Change: </strong><%= stock.ytdChange %>%</p>
+
+</div>
+
+
+
+
+<%- include("footer") -%>
