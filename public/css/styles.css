@@ -65,3 +65,18 @@ h1, h2, h3, h4 {
     line-height: 50px;
     background-color: #212529;
 }
+
+
+/* about */
+
+.link {
+  color:  #C70039;
+}
+
+.link:hover {
+  color:  #900C3F;
+}
+
+.list {
+  margin-bottom: 50px;
+}

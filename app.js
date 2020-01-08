@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 // call api function
 function call_api(finisheAPI, stock_ticker) {
-  request("https://cloud.iexapis.com/stable/stock/"+ stock_ticker +"/quote?token=pk_d00312fbf5be40adb830b9295827e9bf", { json: true }, function(err, res, body) {
+  request("https://cloud.iexapis.com/stable/stock/" + stock_ticker + "/quote?token=pk_d00312fbf5be40adb830b9295827e9bf", { json: true }, function(err, res, body) {
     if (err) {
       return console.log(err);
     } if (res.statusCode === 200) {
@@ -22,15 +22,14 @@ function call_api(finisheAPI, stock_ticker) {
   });
 }
 
-var day = new Date();
-
 //GET route
 app.get("/", function(req, res) {
   call_api(function(readyAPI) {
     res.render("index", {
       stock: readyAPI
     });
-  });
+  }, "amd");
+
 });
 
 //POST route
