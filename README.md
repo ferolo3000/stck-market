@@ -1,4 +1,4 @@
-# stck-market
+# [stck-market](https://stck-market.herokuapp.com/)
 
 ## Stck Market App
 
